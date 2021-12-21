@@ -1,0 +1,19 @@
+[package]
+name = "lichess"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chess = "3.2.0"
+
+chess_engine = { path = "../chess_engine" }
+
+tokio = { version = "1.15.0", features = ["full"] }
+tokio-stream = "0.1.8"
+
+dotenv = "0.15.0"
+
+futures-util = "0.3.12"
+licoricedev = { path = "../licoricedev" }
