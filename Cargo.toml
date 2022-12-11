@@ -1,2 +1,2 @@
 [workspace]
-members = ["chess_engine", "lichess", "licoricedev"]
+members = ["chess_engine", "lichess", "licoricedev", "search_tree"]

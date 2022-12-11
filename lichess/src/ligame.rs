@@ -52,7 +52,7 @@ impl LiGame {
 
     pub async fn search_move(&self, game: &Game, color: Color) -> Result<(), LichessError> {
         println!("Start searching move for: {:?}", color);
-        let chess_move = chess_engine::find_move(game, 200_000, 14, color);
+        let chess_move = chess_engine::find_move(game, 100_000, 14, color);
         let uci_move = chess_move.to_string();
 
         println!("make move: {}", uci_move);
@@ -66,7 +66,7 @@ impl LiGame {
 fn parse_board_state(board: BoardState) -> Option<Game> {
     let state = match board {
         BoardState::GameFull(full) => full.state,
-        BoardState::GameState(state) => (state),
+        BoardState::GameState(state) => state,
         BoardState::ChatLine(_) => return None,
     };
 

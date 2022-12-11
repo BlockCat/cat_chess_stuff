@@ -1,9 +1,6 @@
-use std::hash::Hash;
-
 use chess::{Action, ChessMove, Color, Game, GameResult, MoveGen};
 use mcts::GameState;
-
-use crate::mcts_handler::ChessMCTS;
+use std::hash::Hash;
 
 #[derive(Debug, Clone)]
 pub struct GameWrapper(pub Game);
